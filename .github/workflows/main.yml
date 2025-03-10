@@ -3,7 +3,7 @@ name: Run Python Script # Workflow name
 on: # Trigger event when git push
   push:
     branches:
-      -main
+      - main
   workflow_dispatch: # Allow the trigger manually
 
 jobs:
