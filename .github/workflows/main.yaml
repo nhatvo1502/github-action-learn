@@ -1,0 +1,21 @@
+name: Run Python Script # Workflow name
+
+on: # Trigger event when git push
+  push:
+    branches:
+      -main
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest # Runner type ubuntu
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4 # download the code into runner (official GitHub Action)
+      
+      - name: Step up Python
+        uses: actions/set-python@v4 # install Python on the runner (official Github Action)
+        with:
+          python-version: '3.11'
+        
+      - name: Run Python Script
+        run: python hello.py # run the script
