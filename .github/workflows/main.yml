@@ -4,6 +4,7 @@ on: # Trigger event when git push
   push:
     branches:
       -main
+  workflow_dispatch: # Allow the trigger manually
 
 jobs:
   run-script:
